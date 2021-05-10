@@ -20,5 +20,11 @@ export default {
 <style>
 body{
   margin: 0 0 0 0;
+  background-color: #fff;
+}
+
+/* Temp for see the border */
+.el-col {
+  border: 1px solid royalblue;
 }
 </style>
