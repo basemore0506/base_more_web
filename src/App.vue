@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <RightNav />
     <el-container>
       <Home />
     </el-container>
@@ -8,11 +9,13 @@
 
 <script>
 import Home from './components/Home.vue'
+import RightNav from "./components/RightNav.vue"
 
 export default {
   name: 'app',
   components: {
     Home,
+    RightNav
   }
 }
 </script>
