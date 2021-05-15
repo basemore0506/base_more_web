@@ -6,10 +6,14 @@
       </div>
       <div class="tab-content">111</div>
       <div class="tab-content">222</div>
-      <div class="tab-content">333</div>
     </div>
     <div class="video">
-      <video src="../video/movie.mp4" muted autoplay loop/>
+      <!-- <video src="../video/movie.mp4" muted autoplay loop/> -->
+      <el-image 
+          style="width: 100%; height: 100%"
+          :fit="fill"
+          :src="require('../static/images/header.png')" z-index=1>
+        </el-image>
     </div>
   </div>
 </template>
@@ -36,13 +40,14 @@ export default {
   top: 0;
   width: 100vw;
   height: 100vh;
+  z-index: 1;
 }
 
 .tab-content {
   flex: 1;
   background-color:white;
   opacity: 0.5;
-  height: 80px;
+  height: 25vh;
 }
 
 .tab-logo {
