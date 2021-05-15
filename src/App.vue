@@ -1,21 +1,21 @@
 <template>
   <div id="app">
-    <RightNav />
-    <el-container>
+    <el-container direction="vertical">
       <Home />
+      <Footer />
     </el-container>
   </div>
 </template>
 
 <script>
 import Home from './components/Home.vue'
-import RightNav from "./components/RightNav.vue"
+import Footer from './components/Footer'
 
 export default {
   name: 'app',
   components: {
     Home,
-    RightNav
+    Footer
   }
 }
 </script>

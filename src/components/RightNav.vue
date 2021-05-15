@@ -1,5 +1,5 @@
 <template>
-  <div class="leftNavi">
+  <div class="rightNavi">
       <font-awesome-icon icon="bars" inverse size="lg" @click="drawer = true"/>
       <el-drawer
         title="我是标题"
@@ -26,7 +26,7 @@ export default {
 </script>
 
 <style>
-.leftNavi {
+.rightNavi {
     position:fixed;
     right: 5vw;
     top: 5vh;
