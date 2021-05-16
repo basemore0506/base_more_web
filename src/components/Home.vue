@@ -3,12 +3,12 @@
   <Banner />
   <el-main class="remove_padding">
     <el-row type="flex" justify="center" >
-      <el-col :span="3" style="height:30vh;line-height:30vh;text-align:center; font-size:5vh">FUN</el-col>
-      <el-col :span="3" style="height:30vh;line-height:30vh;text-align:center; font-size:5vh">BEAUTY</el-col>
-      <el-col :span="3" style="height:30vh;line-height:30vh;text-align:center; font-size:5vh">TECH</el-col>
+      <el-col :span="5" style="height:30vh;line-height:30vh;text-align:center; font-size:5vw">FUN</el-col>
+      <el-col :span="5" style="height:30vh;line-height:30vh;text-align:center; font-size:5vw">BEAUTY</el-col>
+      <el-col :span="5" style="height:30vh;line-height:30vh;text-align:center; font-size:5vw">TECH</el-col>
     </el-row>
     <el-row type="flex" justify="center">
-      <el-col :span="24" style="height:30vh;text-align:center;font-size:2vh">Basemore vehcles would like to bring you more fun through technology and design</el-col>
+      <el-col :span="24" style="height:30vh;text-align:center;font-size:2vw">Basemore vehcles would like to bring you more fun through technology and design</el-col>
     </el-row>
     <el-row>
       <el-col :span="12" class="mono">Mono 1</el-col>
