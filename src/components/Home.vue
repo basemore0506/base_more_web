@@ -2,9 +2,9 @@
   <div>
   <Banner />
   <el-main class="remove_padding">
-    <el-row type="flex" justify="center" >
-      <el-col :span="5" style="height:30vh;line-height:30vh;text-align:center; font-size:5vw">FUN</el-col>
-      <el-col :span="5" style="height:30vh;line-height:30vh;text-align:center; font-size:5vw">BEAUTY</el-col>
+    <el-row type="flex" justify="center" style="font-family:AlexBrush">
+      <el-col :span="5" style="height:30vh;line-height:30vh;text-align:center; font-size:4vw">FUN</el-col>
+      <el-col :span="5" style="height:30vh;line-height:30vh;text-align:center; font-size:4vw">BEAUTY</el-col>
       <el-col :span="5" style="height:30vh;line-height:30vh;text-align:center; font-size:5vw">TECH</el-col>
     </el-row>
     <el-row type="flex" justify="center">
