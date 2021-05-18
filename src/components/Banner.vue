@@ -2,7 +2,13 @@
   <div class="video-wrapper">
     <div class="tab-nav">
       <div class="tab-logo">
-        <div class="logo">Logo</div>
+        <div class="logo-sm logo-md">
+          <el-image
+            style="width:100%; height:100%"
+            :fit="fill"
+            :src="require('../static/images/logo.png')">
+          </el-image>
+        </div>
       </div>
       <div class="tab-content">111</div>
       <div class="tab-content">222</div>
@@ -10,10 +16,10 @@
     <div class="video">
       <!-- <video src="../video/movie.mp4" muted autoplay loop/> -->
       <el-image 
-          style="width: 100%; height: 100%"
-          :fit="fill"
-          :src="require('../static/images/header.png')" z-index=1>
-        </el-image>
+        style="width: 100%; height: 100%"
+        :fit="fill"
+        :src="require('../static/images/header.png')">
+      </el-image>
     </div>
   </div>
 </template>
@@ -57,14 +63,22 @@ export default {
   justify-content: center;
 }
 
-.logo {
-  margin-top: 2%;
-  background-color: wheat;
-  height: 100%;
-  width: 100px;
-  opacity: 0.5;
-  text-align: center;
-  line-height: 50px;
+@media screen and (min-width: 768px){
+  .logo-md {
+    margin-top: 5vh;
+    text-align: center;
+    width: 15vmin;
+    height: 15vmin;
+  }
+}
+
+@media screen and (max-width: 768px){
+  .logo-md {
+    margin-top: 5vh;
+    text-align: center;
+    width: 20vmin;
+    height: 20vmin;
+  } 
 }
 
 .video{

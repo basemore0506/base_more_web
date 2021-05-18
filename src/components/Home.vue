@@ -18,7 +18,7 @@
       <el-col :span="24" style="height:10vh;line-height:10vh;text-align:center;">@Basemore</el-col>
     </el-row>
     <el-row type="flex" style="width:100vw; flex-wrap:wrap" justify="center">
-      <el-col :span="7" style="margin: 10px;">
+      <el-col :span="7" sm="" class="pic-div">
         <el-image 
           style="width: 100%; height: 100%"
           :fit="fill"
@@ -26,7 +26,7 @@
           :preview-src-list="[require('../static/images/gallery1.jpg')]" lazy>
         </el-image>
       </el-col>
-      <el-col :span="7" style="margin: 10px;">
+      <el-col :span="7" class="pic-div">
         <el-image 
           style="width: 100%; height: 100%"
           :fit="fill"
@@ -34,7 +34,7 @@
           :preview-src-list="[require('../static/images/gallery2.jpg')]" lazy>
         </el-image>
       </el-col>
-      <el-col :span="7" style="margin: 10px;">
+      <el-col :span="7" class="pic-div">
         <el-image 
           style="width: 100%; height: 100%"
           :fit="fill"
@@ -42,7 +42,7 @@
           :preview-src-list="[require('../static/images/gallery3.jpg')]" lazy>
         </el-image>
       </el-col>
-      <el-col :span="7" style="margin: 10px;">
+      <el-col :span="7" class="pic-div">
         <el-image 
           style="width: 100%; height: 100%"
           :fit="fill"
@@ -50,7 +50,7 @@
           :preview-src-list="[require('../static/images/gallery4.jpg')]" lazy>
         </el-image>
       </el-col>
-      <el-col :span="7" style="margin: 10px;">
+      <el-col :span="7" class="pic-div">
         <el-image 
           style="width: 100%; height: 100%"
           :fit="fill"
@@ -58,7 +58,7 @@
           :preview-src-list="[require('../static/images/gallery5.jpg')]" lazy>
         </el-image>
       </el-col>
-      <el-col :span="7" style="margin: 10px;">
+      <el-col :span="7" class="pic-div">
         <el-image 
           style="width: 100%; height: 100%"
           :fit="fill"
@@ -89,5 +89,9 @@ export default {
 .mono{
   height:40vh;
   border: 1px solid black;
+}
+
+.pic-div {
+  margin: 1vh 1vw;
 }
 </style>
