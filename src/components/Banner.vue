@@ -4,22 +4,26 @@
       <div class="tab-logo">
         <div class="logo-sm logo-md">
           <el-image
-            style="width:100%; height:100%"
+            style="width:100%;"
             :fit="fill"
             :src="require('../static/images/logo.png')">
           </el-image>
         </div>
       </div>
-      <div class="tab-content">111</div>
-      <div class="tab-content">222</div>
+      <div class="tab-content-wrapper-md tab-content-wrapper-sm">
+        <div class="tab-content">111</div>
+        <div class="tab-content">222</div>
+      </div>
     </div>
     <div class="video">
       <!-- <video src="../video/movie.mp4" muted autoplay loop/> -->
-      <el-image 
-        style="width: 100%; height: 100%"
-        :fit="fill"
+      <!-- <el-image 
+        style="height: 100vh"
+        :fit="none"
         :src="require('../static/images/header.png')">
-      </el-image>
+      </el-image> -->
+      <div class="header-img"></div>
+
     </div>
   </div>
 </template>
@@ -34,6 +38,18 @@ export default {
 .video-wrapper {
   width: 100vw;
   height: 100vh;
+}
+
+.header-img{
+    width:100vw;
+    height:100vh;
+    overflow:hidden;
+    background-image:url(../static/images/header.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    background-size:cover;
 }
 
 .tab-nav {
@@ -53,7 +69,8 @@ export default {
   flex: 1;
   background-color:white;
   opacity: 0.5;
-  height: 25vh;
+  height: 100%;
+  width: 100%;
 }
 
 .tab-logo {
@@ -70,20 +87,41 @@ export default {
     width: 15vmin;
     height: 15vmin;
   }
+
+  .tab-content-wrapper-md {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: flex-start;
+    width: 100vw;
+    height: 25vh;
+  }
 }
 
 @media screen and (max-width: 768px){
-  .logo-md {
+  .logo-sm {
     margin-top: 5vh;
     text-align: center;
     width: 20vmin;
     height: 20vmin;
   } 
+
+  .tab-content-wrapper-md {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: flex-start;
+    width: 100vw;
+    height: 40vh;
+  }
 }
 
 .video{
   width: 100vw;
   height: 100vh;
+  overflow: hidden;
 }
 
 video{  

@@ -24,6 +24,6 @@ export default {
 body{
   margin: 0 0 0 0;
   background-color: #fff;
-  font-family: "San Francisco UI","Arial","Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",sans-serif;
+  font-family: "adventpro-regular","San Francisco UI","Arial","Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",sans-serif;
 }
 </style>
