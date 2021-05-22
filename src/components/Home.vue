@@ -32,12 +32,20 @@
       <el-col :span="24" style="height:10vh;line-height:10vh;text-align:center;">@Basemore</el-col>
     </el-row>
     <el-row type="flex" style="width:100vw; flex-wrap:wrap" justify="center">
-      <el-col :span="7" class="pic-div">
+      <el-col :span="7" class="pic-div" v-for="n in 6" :key="n">
+        <el-image 
+          style="width: 100%; height: 100%"
+          fit="fill"
+          :src="getSrc(n)" 
+          :preview-src-list="getAllPics(n,6)" lazy>
+        </el-image>
+      </el-col>
+      <!-- <el-col :span="7" class="pic-div">
         <el-image 
           style="width: 100%; height: 100%"
           fit="fill"
           :src="require('../static/images/gallery1.jpg')" 
-          :preview-src-list="[require('../static/images/gallery1.jpg')]" lazy>
+          :preview-src-list="getAllPics(1,6)" lazy>
         </el-image>
       </el-col>
       <el-col :span="7" class="pic-div">
@@ -45,7 +53,7 @@
           style="width: 100%; height: 100%"
           fit="fill"
           :src="require('../static/images/gallery2.jpg')" 
-          :preview-src-list="[require('../static/images/gallery2.jpg')]" lazy>
+          :preview-src-list="getAllPics(2,6)" lazy>
         </el-image>
       </el-col>
       <el-col :span="7" class="pic-div">
@@ -53,7 +61,7 @@
           style="width: 100%; height: 100%"
           fit="fill"
           :src="require('../static/images/gallery3.jpg')" 
-          :preview-src-list="[require('../static/images/gallery3.jpg')]" lazy>
+          :preview-src-list="getAllPics(3,6)" lazy>
         </el-image>
       </el-col>
       <el-col :span="7" class="pic-div">
@@ -61,7 +69,7 @@
           style="width: 100%; height: 100%"
           fit="fill"
           :src="require('../static/images/gallery4.jpg')" 
-          :preview-src-list="[require('../static/images/gallery4.jpg')]" lazy>
+          :preview-src-list="getAllPics(4,6)" lazy>
         </el-image>
       </el-col>
       <el-col :span="7" class="pic-div">
@@ -69,7 +77,7 @@
           style="width: 100%; height: 100%"
           fit="fill"
           :src="require('../static/images/gallery5.jpg')" 
-          :preview-src-list="[require('../static/images/gallery5.jpg')]" lazy>
+          :preview-src-list="getAllPics(5,6)" lazy>
         </el-image>
       </el-col>
       <el-col :span="7" class="pic-div">
@@ -77,9 +85,9 @@
           style="width: 100%; height: 100%"
           fit="fill"
           :src="require('../static/images/gallery6.jpg')" 
-          :preview-src-list="[require('../static/images/gallery6.jpg')]" lazy>
+          :preview-src-list="getAllPics(6,6)" lazy>
         </el-image>
-      </el-col>
+      </el-col> -->
     </el-row>
   </el-main>
   </div>
@@ -89,8 +97,42 @@
 import Banner from "./Banner.vue"
 
 export default {
+  data() {
+    return {
+      imgList : [
+      require('../static/images/gallery1.jpg'),
+      require('../static/images/gallery2.jpg'),
+      require('../static/images/gallery3.jpg'),
+      require('../static/images/gallery4.jpg'),
+      require('../static/images/gallery5.jpg'),
+      require('../static/images/gallery6.jpg')]
+    }
+  },
   components: {
     Banner
+  },
+  computed: {
+    getSrc() {
+      return(order) => {
+        return this.imgList[order-1]
+      }
+    },
+    getAllPics() {
+      return (order,number) => {
+        var ary = new Array()
+        var i = 1;
+        var times = 1;
+        while(i <= number && times <= number) {
+          ary.push(this.imgList[i-1])
+          if (i == number) {
+            i = 0;
+          }
+          i++
+          times++
+        }
+        return ary
+      }
+    }
   }
 }
 </script>

@@ -4,10 +4,10 @@ import './plugins/element.js'
 import './common/font.css'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
-import { faWeixin,faWeibo } from '@fortawesome/free-brands-svg-icons'
+import { faWeixin,faWeibo,faTiktok} from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
-library.add(faBars,faWeixin,faWeibo)
+library.add(faBars,faWeixin,faWeibo,faTiktok)
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 

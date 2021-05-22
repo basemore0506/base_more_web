@@ -14,14 +14,14 @@
 <script>
 export default {
   data() {
-      return {
-        drawer: false,
-        direction: 'rtl',
-      };
-    },
-    methods: {
-      
-    }
+    return {
+      drawer: false,
+      direction: 'rtl',
+    };
+  },
+  methods: {
+    
+  }
 }
 </script>
 
