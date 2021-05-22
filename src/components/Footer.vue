@@ -11,16 +11,16 @@
       <el-col :span="12">Contact with us:</el-col>
     </el-row>
     <el-row type="flex" justify="center" style="height:5vh;line-height:5vh">
-      <el-col :span="4" style="border: 1px solid gray;padding-top: 0.5vh;">
-        <font-awesome-icon :icon="['fab', 'weibo']" size="2x" inverse/>
+      <el-col :span="4" style="border: 1px solid gray">
+        <font-awesome-icon :icon="['fab', 'weibo']" size="2x" inverse class="icon-md icon-sm"/>
       </el-col>
-      <el-col :span="4" style="border: 1px solid gray;padding-top: 0.5vh;">
+      <el-col :span="4" style="border: 1px solid gray;">
         <el-popover trigger="click" placement="top">
           <el-image
-            style="width: 100px; height: 100px"
+            style="width: 10vmax; height: 10vmax; text-align: center"
             :src="picSrc"
-            :fit="fit"></el-image>
-          <font-awesome-icon :icon="['fab', 'weixin']" size="2x" slot="reference" style="cursor:pointer" inverse/>
+            fit="fill"></el-image>
+          <font-awesome-icon :icon="['fab', 'weixin']" slot="reference" style="cursor:pointer" inverse class="icon-md icon-sm"/>
         </el-popover>
       </el-col>
     </el-row>
@@ -113,6 +113,19 @@ export default {
   .third-roll-sm {
     animation: 30s sm-marquee linear 20s infinite normal;
   } 
+}
+
+@media screen and (min-width: 375px){
+  .icon-md{
+    padding-top: 0.5vh;
+    font-size: 2em;
+  }
+}
+
+@media screen and (max-width: 375px){
+  .icon-sm{
+    font-size: 1.5em;
+  }
 }
 
 </style>

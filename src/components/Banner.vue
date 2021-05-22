@@ -5,14 +5,32 @@
         <div class="logo-sm logo-md">
           <el-image
             style="width:100%;"
-            :fit="fill"
+            fit="fill"
             :src="require('../static/images/logo.png')">
           </el-image>
         </div>
       </div>
       <div class="tab-content-wrapper-md tab-content-wrapper-sm">
-        <div class="tab-content">111</div>
-        <div class="tab-content">222</div>
+        <div class="tab-content">
+          <div class="tab-content-img">
+            <el-image
+              style="width:100%;"
+              fit="fill"
+              :src="require('../static/images/mono.png')">
+            </el-image>
+          </div>
+          <div>Basemore 01</div>
+        </div>
+        <div class="tab-content">
+          <div class="tab-content-img">
+            <el-image
+              style="width:100%;"
+              fit="fill"
+              :src="require('../static/images/mono2.png')">
+            </el-image>
+          </div>
+          <div>Basemore 02</div>
+        </div>
       </div>
     </div>
     <div class="video">
@@ -67,10 +85,16 @@ export default {
 
 .tab-content {
   flex: 1;
-  background-color:white;
-  opacity: 0.5;
+  background-color:rgba(255, 255, 255, 0.5);
+  /* opacity: 0.5; */
   height: 100%;
   width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.tab-content-img {
+  width: 40%;
 }
 
 .tab-logo {
