@@ -100,12 +100,21 @@ export default {
   data() {
     return {
       imgList : [
-      require('../static/images/gallery1.jpg'),
-      require('../static/images/gallery2.jpg'),
-      require('../static/images/gallery3.jpg'),
-      require('../static/images/gallery4.jpg'),
-      require('../static/images/gallery5.jpg'),
-      require('../static/images/gallery6.jpg')]
+        require('../static/images/gallery1.jpg'),
+        require('../static/images/gallery2.jpg'),
+        require('../static/images/gallery3.jpg'),
+        require('../static/images/gallery4.jpg'),
+        require('../static/images/gallery5.jpg'),
+        require('../static/images/gallery6.jpg')
+      ],
+      imgListMicro : [
+        require('../static/images/gallery1-micro.png'),
+        require('../static/images/gallery2-micro.png'),
+        require('../static/images/gallery3-micro.png'),
+        require('../static/images/gallery4-micro.png'),
+        require('../static/images/gallery5-micro.png'),
+        require('../static/images/gallery6-micro.png')
+      ]
     }
   },
   components: {
@@ -114,13 +123,13 @@ export default {
   computed: {
     getSrc() {
       return(order) => {
-        return this.imgList[order-1]
+        return this.imgListMicro[order-1]
       }
     },
     getAllPics() {
       return (order,number) => {
         var ary = new Array()
-        var i = 1;
+        var i = order;
         var times = 1;
         while(i <= number && times <= number) {
           ary.push(this.imgList[i-1])
