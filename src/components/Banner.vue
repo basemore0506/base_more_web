@@ -33,14 +33,16 @@
         </div>
       </div>
     </div>
-    <div class="video">
-      <!-- <video src="../video/movie.mp4" muted autoplay loop/> -->
+    <div class="video-sm video-md">
+      <div>
+        <video src="../video/movie.mp4" autoplay muted loop playsinline class="thisVideo-sm thisVideo-md"/>
+      </div>
       <!-- <el-image 
         style="height: 100vh"
         :fit="none"
         :src="require('../static/images/header.png')">
       </el-image> -->
-      <div class="header-img"></div>
+      <!-- <div class="header-img"></div> -->
 
     </div>
   </div>
@@ -121,6 +123,18 @@ export default {
     width: 100vw;
     height: 25vh;
   }
+
+  .video-md{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .thisVideo-md{
+    width: 100vw;
+    height: 100vh;
+    object-fit: fill !important;
+  }  
 }
 
 @media screen and (max-width: 768px){
@@ -131,7 +145,7 @@ export default {
     height: 20vmin;
   } 
 
-  .tab-content-wrapper-md {
+  .tab-content-wrapper-sm {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -140,17 +154,20 @@ export default {
     width: 100vw;
     height: 40vh;
   }
-}
 
-.video{
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-}
-
-video{  
+  .video-sm{
     width: 100vw;
     height: 100vh;
-    object-fit: fill;
-}  
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center
+  }
+
+  .thisVideo-sm{  
+      height: 100vh;
+      object-fit: cover !important;
+  }  
+}
 </style>

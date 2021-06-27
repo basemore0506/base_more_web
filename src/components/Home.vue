@@ -100,12 +100,12 @@ export default {
   data() {
     return {
       imgList : [
-        require('../static/images/gallery1.jpg'),
-        require('../static/images/gallery2.jpg'),
-        require('../static/images/gallery3.jpg'),
-        require('../static/images/gallery4.jpg'),
-        require('../static/images/gallery5.jpg'),
-        require('../static/images/gallery6.jpg')
+        require('../static/images/gallery1.png'),
+        require('../static/images/gallery2.png'),
+        require('../static/images/gallery3.png'),
+        require('../static/images/gallery4.png'),
+        require('../static/images/gallery5.png'),
+        require('../static/images/gallery6.png')
       ],
       imgListMicro : [
         require('../static/images/gallery1-micro.png'),
